@@ -34,9 +34,34 @@
   * @import "components/buttons";
   * @import "components/forms";
   */
+.btn-primary {
+  @apply py-4 px-5 shadow-sm bg-blue-600 rounded text-white uppercase mb-4 font-semibold;
+}
 
+.btn-scondary {
+  @apply py-4 px-5 bg-white border shadow uppercase;
+}
 
-  /**
+.banner {
+  background: #f8f9fa;
+  background-image: url("https://web.dev/images/headers/future_web.svg");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  padding: 72px 24px;
+  background-position: left 50% top -275px;
+}
+
+@screen md {
+  .btn-primary {
+    @apply mr-4 mb-0;
+  }
+  .banner {
+    background-position: left 530px top 50%;
+    background-size: 750px;
+  }
+}
+
+/**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
   *
@@ -44,9 +69,9 @@
   *
   * @import "tailwindcss/utilities";
   */
-  @tailwind utilities;
+@tailwind utilities;
 
-  /**
+/**
   * Here you would add any custom utilities you need that don't come out of the
   * box with Tailwind.
   *
